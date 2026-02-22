@@ -1,0 +1,109 @@
+{
+  "battery": {
+    "intervals": 10,
+    "states": {
+      "good": 90,
+      "warning": 20,
+      "critical": 10
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "clock": {
+    "format-alt": "{:%a, %d. %b  %H:%M}",
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", ""]
+    },
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+
+  "mpris": {
+    "format": "{status_icon} {player_icon}   {artist} - {title}",
+    "player-icons": {
+      "spotify": "",
+      "chromium": "",
+      "vlc": "",
+      "default": ""
+    },
+    "status-icons": {
+      "playing": "",
+      "paused": "",
+      "stopped": ""
+    },
+    "max-length": 50,
+    "scroll-step": 1,
+    "scroll-speed": 50
+  },
+
+  "custom/media_prev": {
+    "format": "",
+    "on-click": "playerctl previous"
+  },
+
+  "custom/media_next": {
+    "format": "",
+    "on-click": "playerctl next"
+  },
+
+  "network": {
+    "format": "",
+    "format-alt": "{essid} ",
+    "format-disconnected": "",
+    "tooltip-format": "{signalStrength}%",
+    "tooltip-format-disconnected": "No connection",
+    "max-length": 50,
+    "on-click-right": "~/.config/rofi/scripts/WifiSetup.sh | echo 'hello' "
+  },
+
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace r-1",
+    "on-scroll-down": "hyprctl dispatch workspace r+1",
+    "format": "{icon}",
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "format-icons": {
+      "1": "",
+      "4": "",
+      "5": "",
+      "default": ""
+    }
+  },
+
+  "custom/appmenu": {
+    "format": "  ",
+    "on-click": "~/.config/rofi/scripts/customapp.sh",
+    "on-click-right": "~/.config/hypr/config/keybinds.conf",
+    "tooltip": false
+  },
+  "custom/customizer": {
+    "format": "",
+    "on-click": "zeditor ~/.config",
+    "tooltip-format": "Open the configuration Folder"
+  },
+  "custom/power": {
+    "format": "",
+    "on-click": "~/.config/rofi/scripts/powermenu.sh",
+    "tooltip-format": "Power Options"
+  },
+
+  "custom/blender": {
+    "format": "",
+    "on-click": "blender",
+    "tooltip-format": "Launches the Best software their is"
+  },
+
+  "custom/chrome": {
+    "format": "",
+    "on-click": "google-chrome-stable",
+    "tooltip-format": "Internet search engine"
+  }
+}

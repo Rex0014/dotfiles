@@ -1,0 +1,35 @@
+{
+    "layer": "top",
+    "margin": "10 10 0 10",
+
+    // Load modules
+    "include": ["~/.config/waybar/modules.json"],
+
+    "modules-left": [
+    "custom/customizer",
+    "custom/blender",
+    "custom/chrome",
+    "custom/appmenu",
+    "hyprland/window"
+    ],
+
+    "modules-center": [
+    "hyprland/workspaces",
+    ],
+
+    "modules-right": [
+    "custom/media_prev",
+    "mpris",
+    "custom/media_next",
+    "pulseaudio",
+    "network",
+    "clock",
+    "battery",
+    "custom/power"
+    ],
+
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+    }
+}

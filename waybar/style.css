@@ -1,0 +1,251 @@
+@import "../hypr/Color-Palette.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: FontAwesome, helvetica;
+    min-height: 10px;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+.modules-center {
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.modules-right,
+.modules-left {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#workspaces {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    min-height: 20px;
+    border-radius: 5px;
+    background: transparent;
+}
+
+#workspaces button {
+    padding-left: 5px;
+    padding-right: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 5px;
+    min-width: 20px;
+    background: @accent1;
+    color: @base3;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    background-color: @accent1;
+    color: @base3;
+    border-radius: 5px;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover,
+#workspaces button:focus,
+#workspaces button:focus-visible,
+#workspaces button:active {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-image: none;
+}
+
+#clock {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    min-height: 20px;
+    color: @base3;
+    background: @accent1;
+}
+
+#battery {
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 1px;
+    margin-right: 5px;
+    border-radius: 5px;
+    min-height: 20px;
+    color: @base3;
+    background: @accent1;
+}
+
+#pulseaudio {
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 0px;
+    margin-right: 5px;
+    border-radius: 5px;
+    min-height: 20px;
+    color: @base3;
+    background: @accent1;
+}
+
+#custom-customizer {
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 0px;
+    margin-right: 5px;
+    border-radius: 5px;
+    min-height: 20px;
+    color: @base3;
+    background: @accent1;
+}
+
+#custom-power {
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 0px;
+    margin-right: 0px;
+    border-radius: 5px;
+    min-height: 20px;
+    color: @base3;
+    background: @accent1;
+}
+
+#custom-blender {
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 0px;
+    margin-right: 5px;
+    border-radius: 5px;
+    min-height: 20px;
+    color: @base3;
+    background: @accent1;
+}
+
+#custom-chrome {
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 0px;
+    margin-right: 5px;
+    border-radius: 5px;
+    min-height: 20px;
+    color: @base3;
+    background: @accent1;
+}
+
+#custom-media_play {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    margin-right: 5px;
+    border-radius: 5px;
+    min-height: 20px;
+    color: @base3;
+    background: @accent1;
+}
+
+#custom-media_prev {
+    padding-top: 0px;
+    margin-right: 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+    min-height: 20px;
+    color: @accent1;
+}
+
+#custom-media_next {
+    padding-top: 0px;
+    margin-right: 20px;
+    border-radius: 5px;
+    min-height: 20px;
+    color: @accent1;
+}
+
+#mpris {
+    min-width: 100px;
+    margin-right: 10px;
+    border-radius: 5px;
+    color: @accent1;
+    padding-bottom: 0px;
+}
+
+#network {
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 0px;
+    margin-right: 5px;
+    border-radius: 5px;
+    min-height: 20px;
+    color: @base3;
+    background: @accent1;
+}
+
+#custom-appmenu {
+    min-width: 25px;
+    margin-right: 5px;
+    background-color: @accent1;
+    border-radius: 5px;
+    background-image: url("file:///home/rex/.config/waybar/icons/CustomApp.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 18px;
+}
+
+#window {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    margin-right: 0px;
+    border-radius: 5px;
+    min-height: 20px;
+    color: @accent1;
+}
+
+#battery.charging {
+    color: white;
+    background-color: green;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: red;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical:not(.charging) {
+    background: red;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
