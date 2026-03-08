@@ -1,0 +1,48 @@
+ @theme "color.rasi"
+
+window {
+    fullscreen: true;
+    background-color: @bg32;
+    padding: 400px 200px;
+}
+
+mainbox {
+    children: [ content ];
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    background-color: transparent;
+}
+
+content {
+    children: [ listview ];
+    background-color: transparent;
+
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+listview {
+    background-color: transparent;
+    orientation: horizontal;
+    lines: 1;
+    columns:    3;
+    spacing: 50px;
+    expand: false;
+    vertical-align: 0.5;
+}
+
+element {
+    background-color: transparent;
+    padding: 0px 100px 0px 0px;
+    children: [ element-text ];
+}
+
+element-text {
+    text-color: @bg2;
+    font: "Awesome 180";
+    background-color: transparent;
+    horizontal-align: 0.5;
+}
+element-text selected normal {
+    text-color: @pr1;
+}
