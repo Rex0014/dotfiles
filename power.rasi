@@ -1,5 +1,0 @@
-configuration {
-    show-icons: true;
-}
-
-@import "~/.config/rofi/themes/power_theme.rasi"
