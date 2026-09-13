@@ -1,0 +1,46 @@
+{
+    "appearance": {
+        "transparency": {
+            "enabled": true
+        }
+    },
+    "background": {
+        "wallpaperEnabled": true
+    },
+    "dashboard": {
+        "showWeather": false
+    },
+    "general": {
+        "apps": {
+            "terminal": [
+                "kitty"
+            ]
+        },
+        "idle": {
+            "timeouts": [
+                {
+                    "idleAction": "lock",
+                    "timeout": 180
+                },
+                {
+                    "idleAction": "dpms off",
+                    "returnAction": "dpms on",
+                    "timeout": 300
+                },
+                {
+                    "enabled": false,
+                    "idleAction": [
+                        "suspendThenHibernate"
+                    ],
+                    "timeout": 600
+                }
+            ]
+        }
+    },
+    "paths": {
+        "wallpaperDir": "/home/rex/05_Media/Wallpapers"
+    },
+    "services": {
+        "audioIncrement": 0.02
+    }
+}
